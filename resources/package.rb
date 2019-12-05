@@ -56,7 +56,7 @@ action :install do
       checksum new_resource.checksum if new_resource.checksum
     end if new_resource.source
 
-    install_cmd = "sudo installer -pkg \"#{pkg_file}\" -target /"
+    install_cmd = "installer -pkg \"#{pkg_file}\" -target /"
     install_cmd += ' -allowUntrusted' if new_resource.allow_untrusted
 
     execute install_cmd do
