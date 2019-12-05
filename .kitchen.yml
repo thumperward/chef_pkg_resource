@@ -1,27 +1,17 @@
+---
 driver:
   name: vagrant
-  provider: vmware_fusion
-
-provisioner:
-  name: chef_zero
-  deprecations_as_errors: true
-
-verifier:
-  name: inspec
 
 platforms:
-  - name: macosx-10.10
-    driver:
-      box: chef/macosx-10.10 # private box in Chef's Atlas account
-  - name: macosx-10.11
-    driver:
-      box: chef/macosx-10.11 # private box in Chef's Atlas account
-  - name: macos-10.12
-    driver:
-      box: chef/macos-10.12 # private box in Chef's Atlas account
+  - name: mac-os-x-yosemite
+  - name: mac-os-x-el-capitan
+  - name: mac-os-x-sierra
+  - name: mac-os-x-high-sierra
+  - name: mac-os-x-mojave
+  - name: mac-os-x-catalina
 
 suites:
-  - name: default
-    run_list: test::default
-  - name: untrusted
-    run_list: test::untrusted
+  - name: application
+    run_list: test::application
+  - name: framework
+    run_list: test::framework
