@@ -11,11 +11,11 @@ jobs:
     - uses: actions/checkout@v1
     - name: Setup ruby
       uses: actions/setup-ruby@v1
-    - name: Run a multi-line script
+    - name: Install ChefDK
       run: |
         wget https://packages.chef.io/files/stable/chefdk/3.2.30/ubuntu/18.04/chefdk_3.2.30-1_amd64.deb
         sudo dpkg -i chefdk_3.2.30-1_amd64.deb
-    - name: run Chef stuff
+    - name: Test cookbook
       run: |
         eval "$(chef shell-init bash)"
         chef --version
