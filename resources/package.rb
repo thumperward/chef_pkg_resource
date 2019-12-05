@@ -44,10 +44,10 @@ action :install do
     pkg_name = new_resource.name ? new_resource.name : new_resource
 
     pkg_file = if new_resource.file.nil?
-      "#{Chef::Config[:file_cache_path]}/#{pkg_name}.pkg"
-    else
-      new_resource.file
-    end
+                 "#{Chef::Config[:file_cache_path]}/#{pkg_name}.pkg"
+               else
+                 new_resource.file
+               end
 
     remote_file "#{pkg_file} - #{new_resource.name}" do
       path pkg_file
