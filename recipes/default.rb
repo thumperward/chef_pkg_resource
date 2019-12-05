@@ -1,8 +1,8 @@
 #
-# Cookbook:: dmg
+# Cookbook:: pkg
 # Recipe:: default
 #
-# Copyright:: 2011-2017, Chef Software, Inc.
+# Copyright:: 2019, Chris Cunningham
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,4 +17,4 @@
 # limitations under the License.
 #
 
-Chef::Log.warn('The dmg::default recipe does not contain any resources and should not be applied to a node')
+Chef::Log.warn('The pkg::default recipe does not contain any resources and should not be applied to a node')
